@@ -1,9 +1,6 @@
 package com.example.ShiftPlanner.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Employee {
@@ -13,10 +10,22 @@ public class Employee {
     private Long id;
 
     private String name;
+
     private String email;
+
     private String role;
 
+    private String status;
+
     public Employee() {
+    }
+
+    public Employee(Long id, String name, String email, String role, String status) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.role = role;
+        this.status = status;
     }
 
     public Long getId() {
@@ -49,5 +58,13 @@ public class Employee {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

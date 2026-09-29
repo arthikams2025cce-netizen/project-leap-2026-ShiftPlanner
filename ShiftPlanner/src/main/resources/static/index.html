@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Roster Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    ```
+    <header>
+        <h1>Employee Roster Management</h1>
+        <p>Manage employees, shifts and roster assignments</p>
+    </header>
+
+    <section class="card">
+        <h2>Add Roster</h2>
+
+        <div class="form-group">
+            <label>Employee ID</label>
+            <input type="number" id="employeeId" placeholder="Enter Employee ID">
+        </div>
+
+        <div class="form-group">
+            <label>Shift ID</label>
+            <input type="number" id="shiftId" placeholder="Enter Shift ID">
+        </div>
+
+        <button onclick="addRoster()">Add Roster</button>
+    </section>
+
+    <section class="card">
+        <h2>Roster List</h2>
+
+        <button onclick="loadRosters()">View Rosters</button>
+
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee ID</th>
+                <th>Shift ID</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+
+            <tbody id="rosterTable">
+            <tr>
+                <td colspan="4">Click "View Rosters" to load data</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    ```
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
